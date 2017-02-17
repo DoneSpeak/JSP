@@ -1,0 +1,116 @@
+.book-img{
+	margin-top:1em;
+	background-color:#fff;
+	/*border:1px solid #000;*/
+}
+
+.book-img img{
+	width:100%;
+}
+
+.main{
+	/*background-color:#0f0f0f;*/
+}
+
+.container-fluid{
+	/*background-color: #333;*/
+}
+
+.row{
+	/*background-color: #113457;*/
+}
+
+.newbook-all{
+	height:100%;
+	background-color: #fff;
+}
+
+.sell{
+	height:80%;
+	/*background-color: blue;*/
+}
+
+.booktext{
+	height:18em;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+
+.divider-bookinfo{
+	margin-top:1em;
+	margin-bottom:1em;
+	background-color:#E7E7E7;
+}
+
+.t1{
+	margin-right:1.4em;
+}
+
+.snapped-up-btn-area{
+	height:3em;
+	width:100%;
+	padding-top:0.2em;
+	/*background-color: red;*/
+	text-align: center;
+}
+
+.snapup{
+	height:2.6em;
+	width:8em;
+	line-height: 2.3em;
+	/* border-radius:0.2em; */
+	border:0;
+	background-color:#E53935;
+	color:#fff;
+}
+
+.record{
+	
+}
+
+.rec-head{
+	padding-bottom:2px;
+	margin-bottom:6px;
+	border-bottom:2px solid #E53935;
+}
+
+.rec-card{
+	height:62px;
+	margin-bottom:6px;
+	
+	border:1px solid #e7e7e7;
+}
+
+.img-rec{
+	width:60px;
+}
+
+.txt-rec{
+	padding: 10px;
+}
+
+
+@media(max-width: 1200px){
+	.record{
+		display: none;
+	}
+}
+
+@media(max-width: 768px){
+	.newbook-all{
+		width:60%;
+		min-width: 26em;
+		margin:auto;
+	}
+
+	.newbook-intro{
+		display:none;
+	}
+
+	.booktext{
+		height:unset;
+	}
+
+	.record{
+		display: none;
+	}
+}
