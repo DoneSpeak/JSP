@@ -1,0 +1,102 @@
+.mian-pay a{
+	text-decoration: none;
+}
+
+.amount{
+	padding-top:1em;
+}
+
+.amount-cost{
+	font-size:1.2em;
+	color:#E53935;
+}
+
+.amount .btn{
+	margin-left:0.6em;
+	background-color:#E53935;
+	color:#fff;
+}
+
+input.allchose{
+	margin-left:0.5em;
+	margin-right:0.5em;
+}
+
+
+.tag-left{
+	float:left;
+}
+
+.tag-right{
+	float:right;
+}
+
+/*------------ order ------------*/
+.mian-pay{
+	margin-top:2em;
+}
+
+.order-operator{
+	border-left:1px solid #E53935;
+	background-color:#E7E7E7;
+	padding-top:0.3em;
+	padding-bottom:0.3em;
+	margin-bottom:0.5em;
+}
+
+.ordernum-text{
+	padding-left:0.4em;
+}
+
+.order-putback{
+	margin-left:0.6em;
+}
+
+.order-cancel{
+	margin-left:0.6em;
+}
+
+.paygraphic{
+	border:1px solid #000;
+}
+
+.order-list{
+	background-color:#F5F5F5;
+}
+
+.order-detail{
+	clear:both;
+	background-color:#fff;
+	margin-top:1.5em;
+}
+
+.order-detail table{
+	width:100%;
+}
+
+.order-detail table td{
+	padding:0.4em;
+	border-bottom: 0.1em solid #E7E7E7;
+}
+
+.amount-order{
+	margin-top:1em;
+	margin-right:1em;
+	margin-bottom:1em;
+}
+
+.btn-checkout{
+	margin-left:1em;
+	width:4em;
+	background-color:#E53935;
+	color:#fff;
+	border:0;
+}
+
+.withoutlogin-area{
+	height:200px;
+	line-height: 200px;
+	margin-bottom: 0px;
+	padding-left: 100px;
+	font-size: 24px;
+}

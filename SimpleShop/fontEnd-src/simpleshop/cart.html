@@ -7,6 +7,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   <link href="./bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="./css/style.css" rel="stylesheet"/>
+  <link href="./css/cart-order.css" rel="stylesheet"/>
 </head>
 <body>
 	<nav class="navbar navbar-default" role="navigation">
@@ -29,7 +30,7 @@
 						<li class="li-col"><a href="#">SHOPINDEX</a></li>
 						<li class="li-col"><a href="#">NEWBOOK</a></li>
 						<li class="li-col li-logo"><a href="./index.html"><img class="logo-img" src="./img/robot.png"/></a></li>
-						<li class="li-col"><a href="./cart.html">CART(2)</a></li>
+						<li class="li-col"><a href="#">CART(2)</a></li>
 						<li class="dropdown li-col">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 								CUSTOMER 
@@ -54,16 +55,16 @@
 			</div>
 		</div>
 	</nav>
-	<div class="main">
+	<div class="main main-white">
 		<!-- 模态框（Modal） -->
-		<div class="modal fade" id="addAlert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal fade" id="deleteAlert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		    <div class="modal-dialog modal-sm">
 		        <div class="modal-content">
 		            <div class="modal-header">
 		                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 		                <h4 class="modal-title" id="myModalLabel">提示</h4>
 		            </div>
-		            <div class="modal-body" id="addAlert-content">操作错误</div>
+		            <div class="modal-body" id="deleteAlert-content">操作错误</div>
 		            <div class="modal-footer">
 		                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
 		            </div>
@@ -72,52 +73,48 @@
 		</div>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="book-box col-md-3 col-sm-6">
-					<div class="book">
-						<a href="single.html"><img src="./img/图解TCP IP.jpg" /></a>
-						<p class="book-name">《图解TCP/IP》</p>
-						<p class="book-intro">https安全通道解析，nginx服务器精解宝典，http权威指南！</p>
-						
-						<div class="add-button">
-							<span class="cost">￥33.5</span> / <span class="cost-original">¥49.00</span>
-							<button class="add-btn" data-book-isbn="111223434343">Add To Cart</button>
-						</div>
+				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+					<div class="table-responsive table-shadow">
+	          <table class="table table-striped">
+            	<thead>
+                <tr>
+                  <th></th>
+                  <th>商品名</th>
+                  <th>单价(元)</th>
+                 	<th>数量</th>
+                  <th>金额</th>
+                  <th>操作</th>
+                </tr>
+            	</thead>
+            	<tbody>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                 	<td>《图解机器学习》</td>
+                  <td>38.70</td>
+                  <td>1</td>
+                  <td>38.70</td>
+                  <td><a href="javascript:void(0)" class="delete" data-cost="38.7" data-book-isbn="12345555">删除</a></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                 	<td>《图解HTTP》</td>
+                  <td>38.70</td>
+                  <td>1</td>
+                  <td>38.70</td>
+                  <td><a href="javascript:void(0)" class="delete" data-cost="38.7" data-book-isbn="12345555">删除</a></td>
+                </tr>
+	            </tbody>
+		        </table>
+			    </div>
+			    <div class="divider divider-light"></div>
+			    <div class="amount">
+					<div class="tag-left">
+						<input class="allchose" type="checkbox" />全选
 					</div>
-				</div>
-				<div class="book-box col-md-3 col-sm-6">
-					<div class="book">
-						<a href="single.html"><img src="./img/图解HTTP.jpg"/></a>
-						<p class="book-name">《图解HTTP》</p>
-						<p class="book-intro">172张图解轻松入门从基础知识到最新动向，一本书掌握HTTP协议Web前端开发者必备，从基础知识到最新动向一网打尽</p>
-						
-						<div class="add-button">
-							<span class="cost">￥33.5</span> / <span class="cost-original">¥49.00</span>
-							<button class="add-btn" data-book-isbn="111223434343">Add To Cart</button>
-						</div>
-					</div>
-				</div>
-				<div class="book-box col-md-3 col-sm-6">
-					<div class="book">
-						<a href="single.html"><img src="img/图解openFlow.jpg"/></a>
-						<p class="book-name">《图解openFlow》</p>
-						<p class="book-intro">畅销书《图解TCP/IP》姊妹篇,189张图表轻松入门,从工作原理到应用实例，一本书掌握OpenFlow协议 </p>
-						
-						<div class="add-button">
-							<span class="cost">￥33.5</span> / <span class="cost-original">¥49.00</span>
-							<button class="add-btn" data-book-isbn="111223434343">Add To Cart</button>
-						</div>
-					</div>
-				</div>
-				<div class="book-box col-md-3 col-sm-6">
-					<div class="book">
-						<a href="single.html"><img src="img/图解机器学习.jpg" /></a>
-						<p class="book-name">《图解机器学习》</p>
-						<p class="book-intro">187张图解轻松入门，提供可执行的MATLAB程序代码，覆盖机器学习中的经典、用途的算法 </p>
-						<div class="add-button">
-							<span class="cost">￥33.5</span> / <span class="cost-original">¥49.00</span>
-							<button class="add-btn" data-book-isbn="111223434343">Add To Cart</button>
-						</div>
-					</div>
+					<div class="tag-right">
+			    		总计:<span class="amount-cost">￥00.0</span><button type="submit" class="btn">提交订单</button>
+			    	</div>
+			    </div>
 				</div>
 			</div>
 		</div>
@@ -128,13 +125,15 @@
 				<div class="col-md-3">
 				</div>
 				<div class="blog-coyp col-md-6">
-					<div class="blog text-left"><a href="https://github.com/donespeak" target="_blank">GITHUB</a> | <a href="http://blog.csdn.net/donespeak" target="_blank">CSDN</a> | EMAIL:yangguanr@gmail.com </div><div class="copy text-right">&copy;DoneSpeak.inc</div>
+					<div class="blog text-left"><a href="#">GITHUB</a> | <a href="#">CSDN</a> | EMAIL:yangguanr@gmail.com </div><div class="copy text-right">&copy;DoneSpeak.inc</div>
 				</div>
 			</div>	
 		</div>
 	</div>
-	<script src="./js/jquery-2.1.4.min.js"></script>
-  <script src="./bootstrap-3.3.0/js/bootstrap.min.js"></script>
-  <script src="./js/script.js"></script>
+	
+	<script src="js/jquery-2.1.4.min.js"></script>
+  <script src="bootstrap-3.3.0/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+  
 </body>
 </html>

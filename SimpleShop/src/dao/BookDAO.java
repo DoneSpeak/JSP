@@ -37,7 +37,7 @@ public class BookDAO {
 //--------------- 1. 连接数据库------------------
 			conn = DBHelper.getConnection();
 //--------------- 2. 执行SQL语句，接收执行结果集ResultSet ------------------
-			String sql = "select * from book where state='n'";
+			String sql = "select * from book";
 //			预编译sql语句，获取PreparedStament对象
 			preStmt = conn.prepareStatement(sql);
 //			执行编译的结果

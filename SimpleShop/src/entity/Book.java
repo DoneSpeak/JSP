@@ -73,4 +73,28 @@ public class Book {
 	public void setImg(String img) {
 		this.img = img;
 	}
+	
+//	用于购物车，区分不同的书
+	@Override
+	public int hashCode(){
+		return this.getIsbn().hashCode() + this.getName().hashCode();
+	}
+	
+	@Override
+	public boolean equals(Object obj){
+		if(this == obj){
+			return true;
+		}
+		if(obj instanceof Book){
+			Book b = (Book)obj;
+			if(this.getIsbn().equals(b.getIsbn())
+					&& this.getName().equals(b.getName())){
+				return true;
+			}else{
+				return false;
+			}
+		}else{
+			return false;
+		}
+	}
 }

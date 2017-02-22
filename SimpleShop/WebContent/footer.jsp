@@ -9,8 +9,8 @@
 			</div>	
 		</div>
 	</div>
-	<script src="./js/jquery-2.1.4.min.js"></script>
-  <script src="./bootstrap-3.3.0/js/bootstrap.min.js"></script>
-  <script src="./js/script.js"></script>
+	<script src="js/jquery-2.1.4.min.js"></script>
+  <script src="bootstrap-3.3.0/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

@@ -7,7 +7,8 @@ public class DBHelper {
 //	数据库驱动
 	private static final String driver = "com.mysql.jdbc.Driver";
 //	连接数据库的URL地址，这里使用的是mysql的默认端口3306
-	private static final String url = "jdbc:mysql://localhost:3306/simpleshop";
+//	添加字符集，防止中文写入乱码
+	private static final String url = "jdbc:mysql://localhost:3306/simpleshop?useUnicode=true&characterEncoding=UTF-8";
 //	数据库登陆信息，我这里不使用root用户，一般对与一个项目，我们可以创建一个独立的具有部分权限用户出来，root用户一般都只是用于管理数据库
 	private static final String username = "superboy";
 	private static final String password = "iamsuperboy";

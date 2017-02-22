@@ -71,7 +71,7 @@
 							for(Book b: booksView){
 								System.out.println("进入");
 								System.out.println("book = " + book);
-					%>
+					%>sh
 					<div class="rec-card">
 						<a href="single.jsp?isbn=<%= b.getIsbn() %>"><img class="img-rec pull-left" src="img/<%= b.getImg() %>"/></a>
 						<div class="pull-left txt-rec"><%= b.getName() %><br />￥<%= b.getPrice() %></div>

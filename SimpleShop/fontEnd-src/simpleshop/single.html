@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>DIAGRAM</title>
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   <link href="./bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="./css/style.css" rel="stylesheet"/>
-  <link href="./css/single.css" rel="stylesheet"/>
- 	
 </head>
 <body>
 	<nav class="navbar navbar-default" role="navigation">
@@ -31,7 +30,23 @@
 						<li class="li-col"><a href="#">NEWBOOK</a></li>
 						<li class="li-col li-logo"><a href="./index.html"><img class="logo-img" src="./img/robot.png"/></a></li>
 						<li class="li-col"><a href="#">CART(2)</a></li>
-						<li class="li-col"><a href="#">CUSTOMER</a></li>
+						<li class="dropdown li-col">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								CUSTOMER 
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">用户名</a></li>
+								<li><a href="#">我的订单</a></li>
+								<li class="divider"></li>
+								<li><a href="#">登出</a></li>
+							</ul>
+							<!-- 未登录 -->
+							<!-- <ul class="dropdown-menu">
+								<li><a href="signin.jsp">注册</a></li>
+								<li><a href="login.jsp">登录</a></li>
+							</ul> -->
+						</li>
 					</ul>
 				</div>
 				<div class="nav-divider col-md-3 col-sm-3"><span class="divider"></span></div>
