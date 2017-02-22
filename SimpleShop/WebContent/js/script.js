@@ -9,7 +9,8 @@ $(function(){
 		$.ajax({
 		 	url: "/SimpleShop/cart",
 		 	type: "GET",
-//		 	dataType:"json",
+//		 	使用json格式
+		 	dataType:"json",
 		 	data: {
 		 		isbn: isbn,
 		 		action: "add"
